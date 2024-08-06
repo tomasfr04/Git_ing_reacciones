@@ -11,7 +11,12 @@ import matplotlib.pyplot as plt
 
 """La monstruosa calculadora de ecuaciones diferenciales para multiples reacciones"""
 
+#Simulación de un reactor PFR isotérmico y isobárico con multiples reacciones
 
+"Reaccoines"
+# A + 2B -> C + D
+# 2D + 3A -> C + E
+# B + 2C -> D + F
 
 # Definición de la función para resolver la ecuación diferencial
 def ecuacion_diferencial(dep, v):
@@ -20,10 +25,10 @@ def ecuacion_diferencial(dep, v):
     CA, CB, CC, CD, CE, CF = dep
    
     # Parámetros - constantes
-    k1D = 0.25
-    k2E = 0.1
-    k3F = 5
-    vo = 10
+    k1D = 0.25 # dm6/mol2*min
+    k2E = 0.1 # dm3/mol*min
+    k3F = 5 # dm9/mol2*min
+    vo = 10 #dm3/min
     
     # Ley de Velocidad usando relativas
     r1D = k1D * CA * CB**2
@@ -45,7 +50,7 @@ def ecuacion_diferencial(dep, v):
 Vspam = np.linspace(0, 50, 100) # De 1 a 50 con 100 puntos
 
 # Condiciones iniciales
-Ci = [1.5, 2, 0, 0, 0, 0] #unicamente se alimenta A y B
+Ci = [1.5, 2, 0, 0, 0, 0] #unicamente se alimenta A y B mol/dm3
 
 # Resolución de la ecuación diferencial
 solucion = odeint(ecuacion_diferencial, Ci, Vspam)

@@ -56,7 +56,7 @@ def ejecutar_aumenta_k1_k2():
     # Condiciones iniciales
     Ci = [1, 0, 0] #unicamente se alimenta A y B
     solucion = odeint(ecuacion_diferencial, Ci, tspam, args=(2, 1.5)) #Invocamos a la función que resuleve el sistema ODE
-    
+
     #Calculamos las concentraciones
     concentracion_A = solucion[:, 0] #Obtenemos lista de valores para CA
     concentracion_B = solucion[:, 1] #Obtenemos lista de valores para CB

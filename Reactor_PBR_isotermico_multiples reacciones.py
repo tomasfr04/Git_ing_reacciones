@@ -4,12 +4,19 @@ Created on Mon Mar 18 15:46:05 2024
 
 @author: Tomas Fuentes R
 """
-
+#Importaciones
 import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 
 """La monstruosa calculadora de ecuaciones diferenciales para multiples reacciones"""
+
+"Simulación de un reactor PBR isotérmico y no isobárico con multiples reacciones"
+
+"Reacciones"
+# 2A + 3B -> C
+# 3C + A -> 2D
+# D + 2C -> 2E
 
 # Definición de la función para resolver la ecuación diferencial
 def ecuacion_diferencial(dep, w):
@@ -17,6 +24,7 @@ def ecuacion_diferencial(dep, w):
     # Variables dependientes (Concentración de cada especie)
     FA, FB, FC, FD, FE, y = dep
     FTP = FA+FB+FC+FD+FE
+    
     # Parámetros - constantes - etc
     k1B = 6
     k2D = 8
@@ -56,9 +64,9 @@ def ecuacion_diferencial(dep, w):
 Wspam = np.linspace(0, 2500, 2500) # De 1 a 50 con 100 puntos
 
 # Condiciones iniciales
-CA0=0.5
-vo = 165
-FA0 = vo * CA0
+CA0=0.5 #Mol/L
+vo = 165 #L/min
+FA0 = vo * CA0 #Mol/min   
 
 Ci = [FA0, 0, 0, 0, 0, 1] #unicamente se alimenta A y B
 

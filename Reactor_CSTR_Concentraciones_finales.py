@@ -7,6 +7,7 @@ Created on Mon Mar 18 09:40:28 2024
 
 """ La super calculadora de concentraciones finales de un sistema de multiples reacciones """
 
+#Simulación de un sistema de multiples reacciones para un reactor CSTR
 
 from sympy import *  
 from scipy.optimize import fsolve
