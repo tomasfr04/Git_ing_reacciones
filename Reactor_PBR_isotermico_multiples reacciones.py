@@ -26,12 +26,12 @@ def ecuacion_diferencial(dep, w):
     FTP = FA+FB+FC+FD+FE
     
     # Parámetros - constantes - etc
-    k1B = 6
-    k2D = 8
-    k3E = 7
-    alpha = 0.0006
-    CA0=0.5
-    vo = 165
+    k1B = 6 #CAMBIAR
+    k2D = 8 #CAMBIAR
+    k3E = 7 #CAMBIAR
+    alpha = 0.0006 #CAMBIAR
+    CA0=0.5 #CAMBIAR
+    vo = 165 #CAMBIAR
     Po = CA0 * 0.082057 *(50+273)
     FA0 = vo * CA0
     P = (FA/vo) * 0.082057 *(50+273)

@@ -23,12 +23,12 @@ def ecuacion_diferencial(dep, w):
     x , y = dep
     
     # Parámetros
-    alpha = 0.0007
-    T0 = 150 + 273.15 # K
-    P0 = 12 # atm
+    alpha = 0.0007 #CAMBIAR
+    T0 = 150 + 273.15 # K #CAMBIAR
+    P0 = 12 # atm #CAMBIAR
     CA0 = P0 / (0.08205 * T0) #mol/L
-    FA0 = 6 # gmol/min
-    k = 4.39 # dm^12/(mol^4 gcat min)
+    FA0 = 6 # gmol/min #CAMBIAR
+    k = 4.39 # dm^12/(mol^4 gcat min) #CAMBIAR
     
     # Estequiometría
     CA = (CA0 * (1 - x)/(1-(2/3)*x)) * y

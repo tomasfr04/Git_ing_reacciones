@@ -25,10 +25,10 @@ def ecuacion_diferencial(dep, v):
     CA, CB, CC, CD, CE, CF = dep
    
     # Parámetros - constantes
-    k1D = 0.25 # dm6/mol2*min
-    k2E = 0.1 # dm3/mol*min
-    k3F = 5 # dm9/mol2*min
-    vo = 10 #dm3/min
+    k1D = 0.25 # dm6/mol2*min #CAMBIAR 
+    k2E = 0.1 # dm3/mol*min #CAMBIAR
+    k3F = 5 # dm9/mol2*min #CAMBIAR
+    vo = 10 #dm3/min #CAMBIAR
     
     # Ley de Velocidad usando relativas
     r1D = k1D * CA * CB**2
